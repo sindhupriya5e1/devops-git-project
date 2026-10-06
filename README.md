@@ -1,631 +1,421 @@
-# Task 4 – Git & GitHub Workflow
+# DevOps Git Project
 
-## 1. Project Overview
+## 📌 Project Overview
 
-This project demonstrates a complete Git and GitHub workflow using branches, commits, pull requests, merges, tags, `.gitignore`, and Markdown documentation.
+This project demonstrates the practical usage of **Git and GitHub** for version control and collaborative software development.
 
-The objective of this task is to understand how developers manage code changes using Git branches and collaborate through GitHub Pull Requests.
+The project covers important Git concepts such as:
 
-### Repository
+- Repository creation
+- Git configuration
+- Branching
+- Feature development
+- Pull Requests
+- Merge conflicts
+- Conflict resolution
+- Git workflow
+- Tags and releases
+- `.gitignore`
+- Commit history
+- Collaboration using GitHub
 
-**GitHub Repository:**
-`https://github.com/sindhupriya5e1/devops-git-project`
-
----
-
-## 2. Objectives
-
-The main objectives of this task are:
-
-* Create and configure a GitHub repository.
-* Initialize a local Git repository.
-* Create and manage different Git branches.
-* Work on a feature branch.
-* Push changes to GitHub.
-* Create a Pull Request from the feature branch to `dev`.
-* Merge the feature branch into `dev`.
-* Create a Pull Request from `dev` to `main`.
-* Merge the changes into `main`.
-* Use `.gitignore` to exclude unnecessary files.
-* Create Git tags for project versions.
-* Document the complete Git workflow using Markdown.
-* Maintain a clean and understandable repository structure.
+The complete workflow was implemented using a GitHub repository and documented with screenshots.
 
 ---
 
-# 3. Repository Setup
+## 👩‍💻 Author
 
-A new GitHub repository was created specifically for this task.
+**Sindhupriya Abbineni**
 
-### Repository Name
-
-`devops-git-project`
-
-The repository was kept public so that the completed work and documentation could be reviewed.
-
-The repository contains the project files, Git workflow documentation, README file, and `.gitignore`.
+GitHub: [@sindhupriya5e1](https://github.com/sindhupriya5e1)
 
 ---
 
-# 4. Project Structure
+# 🛠️ Technologies Used
 
-The final project structure is:
+- Git
+- GitHub
+- Git Bash
+- GitHub Pull Requests
+- Markdown
+- Visual Studio Code
+
+---
+
+# 📂 Repository Structure
+
+The repository contains the following important files:
 
 ```text
 devops-git-project/
 │
-├── README.md
 ├── .gitignore
-├── index.html
-    └──git workflow.md
-```
+├── README.md
+├── branches.jpg
+├── conflict-details.jpg
+├── conflict-resolved.jpg
+├── conflict.txt
+├── feature.txt
+├── final-git-history.jpg
+├── git-workflow.md
+├── github-repository.jpg
+├── merge-conflict.jpg
+├── new-change.txt
+├── new-change-2.txt
+├── pr-change.txt
+├── pull-request-conflict-resolution.jpg
+├── pull-request-dev-to-main.jpg
+└── pull-request-feature-to-dev.jpg
+1. GitHub Repository Creation
+A GitHub repository named devops-git-project was created to perform and document the Git activities.
 
-### Description of Files
+The repository was created as a public repository.
 
-| File / Folder      | Purpose                                  |
-| ------------------ | ---------------------------------------- |
-| `README.md`        | Main project documentation               |
-| `.gitignore`       | Files and folders that Git should ignore |
-| `index.html`       | Basic project HTML file                  |
-| `app.txt`          | Project/application information          |
-| `src/`             | Source/project files                     |
-| `docs/workflow.md` | Detailed Git workflow documentation      |
+Repository Screenshot
 
----
+2. Git Initialization and Project Setup
+The project was initialized as a Git repository and connected with GitHub.
 
-# 5. Git Initialization
+The basic Git workflow followed in this project was:
 
-The project was first initialized as a local Git repository.
+Working Directory
+       ↓
+     Git Add
+       ↓
+   Staging Area
+       ↓
+   Git Commit
+       ↓
+ Local Repository
+       ↓
+   Git Push
+       ↓
+     GitHub
+Git was used to track all changes made to the project.
 
-```bash
-git init
-```
+3. Git Branching
+Branches were created to keep different development activities separate.
 
-Git was then configured with the user's identity:
+The repository contains multiple branches, including:
 
-```bash
-git config user.name "Your Name"
-git config user.email "Your Email"
-```
-
-The repository status was checked using:
-
-```bash
-git status
-```
-
-This command helps identify new, modified, staged, and committed files.
-
----
-
-# 6. Creating the Initial Project
-
-The initial project files were created and added to Git.
-
-Files included:
-
-* `README.md`
-* `.gitignore`
-* `index.html`
-* `app.txt`
-* `src/`
-
-The files were added to the staging area:
-
-```bash
-git add .
-```
-
-The first commit was then created:
-
-```bash
-git commit -m "Initial project setup"
-```
-
-This commit represents the initial version of the project.
-
----
-
-# 7. Creating the Main Branch
-
-The primary branch of the project is `main`.
-
-The branch can be created or renamed using:
-
-```bash
-git branch -M main
-```
-
-The current branch can be checked using:
-
-```bash
-git branch
-```
-
-The `main` branch represents the stable version of the project.
-
----
-
-# 8. Creating the Development Branch
-
-A separate development branch was created to keep ongoing development changes away from the stable `main` branch.
-
-```bash
-git checkout -b dev
-```
-
-The branch structure is therefore:
-
-```text
 main
- │
- └── dev
-```
 
-The `dev` branch is used for development and testing before changes are moved to `main`.
-
----
-
-# 9. Creating the Feature Branch
-
-A separate feature branch was created from the development branch.
-
-```bash
-git checkout dev
-git checkout -b feature/project-setup
-```
-
-The feature branch is:
-
-```text
-feature/project-setup
-```
-
-This branch was used to make the required project/documentation changes without directly modifying the `dev` or `main` branches.
-
----
-
-# 10. Making Changes on the Feature Branch
-
-The required project files and documentation were added or updated on the feature branch.
-
-After making the changes, the repository status was checked:
-
-```bash
-git status
-```
-
-The changes were then staged:
-
-```bash
-git add .
-```
-
-A commit was created:
-
-```bash
-git commit -m "Add project setup documentation"
-```
-
-This created a separate commit for the project documentation and setup work.
-
----
-
-# 11. Pushing the Feature Branch to GitHub
-
-The feature branch was pushed to the GitHub repository:
-
-```bash
-git push -u origin feature/project-setup
-```
-
-After pushing, the feature branch became available on GitHub.
-
----
-
-# 12. Creating Pull Request – Feature to Dev
-
-A Pull Request was created on GitHub from:
-
-```text
-feature/project-setup
-```
-
-to:
-
-```text
 dev
-```
 
-The Pull Request allowed the changes to be reviewed before merging them into the development branch.
+feature
 
-The workflow was:
+The main branch represents the stable version of the project.
 
-```text
-feature/project-setup
-          │
-          │ Pull Request
-          ▼
-         dev
-```
+The dev branch was used for development and integration.
 
-After reviewing the changes, the Pull Request was merged.
+The feature branch was used to implement individual feature changes.
 
----
+Branch Screenshot
 
-# 13. Updating the Local Dev Branch
+4. Feature Branch Development
+A separate feature branch was created for making feature-related changes.
 
-After the Pull Request was merged, the local `dev` branch was updated.
+The feature branch allowed changes to be developed independently without directly modifying the main branch.
 
-```bash
-git checkout dev
-git pull origin dev
-```
+Example file used:
 
-This ensured that the local development branch contained the changes merged through GitHub.
+feature.txt
+The feature changes were committed to the feature branch.
 
----
+5. Pull Request: Feature → Dev
+After completing the feature development, a Pull Request was created to merge the feature branch into the development branch.
 
-# 14. Dev to Main Pull Request
+Pull Request Flow
+feature
+   ↓
+Pull Request
+   ↓
+dev
+Screenshot
 
-Once the changes were available and verified in `dev`, another Pull Request was created.
+This process demonstrates how developers can review and integrate feature changes before adding them to the development branch.
 
-The second Pull Request was:
+6. Pull Request Changes
+Additional changes were created and committed during the development process.
 
-```text
-dev → main
-```
+Files such as:
 
-This Pull Request represents the process of promoting tested development changes into the stable production branch.
+new-change.txt
+new-change-2.txt
+pr-change.txt
+were used to demonstrate Pull Request changes.
 
-The workflow was:
+These changes were committed and pushed to the appropriate branch.
 
-```text
-feature/project-setup
-          │
-          │ PR
-          ▼
-         dev
-          │
-          │ PR
-          ▼
-         main
-```
+7. Pull Request: Dev → Main
+After the development work was completed and verified, a Pull Request was created to merge the development branch into the main branch.
 
-After review, the `dev` branch changes were merged into `main`.
-
----
-
-# 15. Final Branch Structure
-
-After completing the workflow, the important branches were:
-
-```text
+Pull Request Flow
+dev
+ ↓
+Pull Request
+ ↓
 main
-dev
-```
+Screenshot
 
-The feature branch:
+This represents the final integration of the development work into the stable main branch.
 
-```text
-feature/project-setup
-```
+8. Merge Conflict
+A merge conflict occurs when Git cannot automatically combine changes from different branches.
 
-was used for the feature work and was deleted after the Pull Request was successfully merged.
+In this project, a merge conflict was intentionally created to demonstrate how conflicts can be identified and resolved.
 
-This keeps the repository clean after completing the feature.
+The conflict was created in:
 
----
+conflict.txt
+Merge Conflict Screenshot
 
-# 16. .gitignore
+9. Conflict Details
+When the conflicting branches were merged, Git identified conflicting changes.
 
-A `.gitignore` file was included in the repository.
+The conflict contained Git conflict markers similar to:
 
-The purpose of `.gitignore` is to prevent unnecessary files from being tracked by Git.
+<<<<<<< HEAD
+Current branch changes
+=======
+Incoming branch changes
+>>>>>>> branch-name
+The conflicting content was reviewed manually before deciding which changes should be retained.
 
-Examples of files that can normally be ignored include:
+Conflict Details Screenshot
 
-```text
-node_modules/
-.env
-*.log
-.vscode/
-.idea/
-.DS_Store
-```
+10. Conflict Resolution
+The conflicting content was manually corrected by removing the unwanted changes and Git conflict markers.
 
-The `.gitignore` file helps maintain a clean repository and prevents temporary or sensitive files from being committed accidentally.
+After resolving the conflict, the corrected file was staged and committed.
 
----
+The general conflict resolution process was:
 
-# 17. Git Tags
-
-Git tags are used to identify important versions of a project.
-
-A tag can be created using:
-
-```bash
-git tag v1.0
-```
-
-The tags can be viewed using:
-
-```bash
-git tag
-```
-
-A tag can be pushed to GitHub using:
-
-```bash
-git push origin v1.0
-```
-
-The tag represents a stable version of the project.
-
----
-
-# 18. Checking Git Status
-
-Throughout the workflow, Git status was used to verify the repository state.
-
-```bash
-git status
-```
-
-This command helps confirm:
-
-* Current branch
-* Modified files
-* Staged files
-* Untracked files
-* Clean working tree
-
-A clean working tree indicates that all required changes have been committed.
-
----
-
-# 19. Checking Branches
-
-The branches can be viewed using:
-
-```bash
-git branch
-```
-
-Remote branches can be viewed using:
-
-```bash
-git branch -r
-```
-
-All local and remote branches can be viewed using:
-
-```bash
-git branch -a
-```
-
-This was useful for verifying the final branch structure.
-
----
-
-# 20. Git Log
-
-The project commit history can be viewed using:
-
-```bash
-git log --oneline --graph --all
-```
-
-This provides a visual representation of the commits and branches.
-
-The project history contains commits such as:
-
-```text
-Initial project setup
-Add project setup documentation
-```
-
-This demonstrates that the project changes were tracked through Git commits.
-
----
-
-# 21. Complete Git Workflow
-
-The complete workflow followed in this task can be represented as:
-
-```text
-                    main
-                     ▲
-                     │
-                  PR / Merge
-                     │
-                     dev
-                     ▲
-                     │
-                  PR / Merge
-                     │
-          feature/project-setup
-                     │
-                  Changes
-                     │
-                  Commit
-                     │
-                Local Git
-```
-
-The overall development process was:
-
-```text
-Create Repository
+Identify Conflict
        ↓
-Initialize Git
+Open Conflicting File
        ↓
-Create main
+Review Changes
        ↓
-Create dev
-       ↓
-Create feature branch
-       ↓
-Make project changes
+Resolve Conflict
        ↓
 git add
        ↓
 git commit
        ↓
-Push feature branch
+Push Changes
+Resolved Conflict Screenshot
+
+11. Pull Request Conflict Resolution
+A Pull Request conflict was also handled as part of the project.
+
+The conflict was resolved before completing the merge.
+
+Screenshot
+
+This demonstrates the practical process of handling conflicts during collaborative GitHub development.
+
+12. Git Workflow
+The complete Git workflow followed in this project is:
+
+Create Repository
        ↓
-Feature → dev Pull Request
+Clone Repository
        ↓
-Merge into dev
+Create Branch
        ↓
-Pull latest dev changes
+Make Changes
        ↓
-dev → main Pull Request
+Git Add
        ↓
-Merge into main
+Git Commit
        ↓
-Create Git Tag
+Git Push
        ↓
-Verify final repository
-```
+Create Pull Request
+       ↓
+Review Changes
+       ↓
+Resolve Conflicts if Required
+       ↓
+Merge Pull Request
+       ↓
+Update Main Branch
+A detailed explanation of the workflow is available in:
 
----
+git-workflow.md
+Git Workflow Documentation
 
-# 22. Verification
+13. Git Commit History
+Git commits were used to maintain a history of changes made throughout the project.
 
-Before completing the task, the repository was checked to ensure:
+Each commit represents a logical change in the project.
 
-* `main` branch exists.
-* `dev` branch exists.
-* Feature branch changes were merged.
-* Feature branch was deleted after successful merge.
-* Project files are available in the repository.
-* `.gitignore` is present.
-* `README.md` is present.
-* `docs/workflow.md` is present.
-* Git commits are visible.
-* Pull Requests were completed.
-* Final code is available on `main`.
-* Git tag/version information is available.
+The repository contains multiple commits demonstrating:
 
----
+Initial project setup
 
-# 23. Screenshots / Evidence
+Branch creation
 
-The following screenshots can be included as evidence for the completed task:
+Feature changes
 
-### Screenshot 1 – Repository
+Pull Request changes
 
-GitHub repository showing:
+Conflict creation
 
-```text
-devops-git-project
-```
+Conflict resolution
 
-### Screenshot 2 – Git Initialization / Status
+Documentation updates
 
-Terminal showing:
+Screenshot uploads
 
-```bash
-git init
-git status
-```
+Final Git History
 
-### Screenshot 3 – Branches
+14. .gitignore
+A .gitignore file was added to the repository.
 
-Terminal showing:
+The purpose of .gitignore is to prevent unnecessary or unwanted files from being tracked by Git.
 
-```bash
-git branch
-```
+For example:
 
-with `main`, `dev`, and the feature branch during development.
+node_modules/
+.env
+*.log
+dist/
+build/
+The .gitignore file helps keep the repository clean and prevents sensitive or generated files from being accidentally committed.
 
-### Screenshot 4 – Feature Branch
+15. GitHub Repository Files
+The final repository contains the documentation files, text files, screenshots, and Git configuration files required for demonstrating the complete workflow.
 
-GitHub/terminal showing:
+Important files include:
 
-```text
-feature/project-setup
-```
+File	Purpose
+.gitignore	Specifies files ignored by Git
+README.md	Project documentation
+feature.txt	Feature branch changes
+conflict.txt	File used for conflict demonstration
+new-change.txt	Pull Request change
+new-change-2.txt	Additional Pull Request change
+pr-change.txt	Pull Request demonstration
+git-workflow.md	Git workflow documentation
+16. Screenshots
+GitHub Repository
 
-### Screenshot 5 – Commit History
+Branches
 
-Terminal showing:
+Feature to Dev Pull Request
 
-```bash
-git log --oneline --graph --all
-```
+Dev to Main Pull Request
 
-### Screenshot 6 – Feature → Dev Pull Request
+Merge Conflict
 
-GitHub Pull Request showing:
+Conflict Details
 
-```text
-feature/project-setup → dev
-```
+Conflict Resolved
 
-and the successful merge.
+Pull Request Conflict Resolution
 
-### Screenshot 7 – Dev → Main Pull Request
+Final Git History
 
-GitHub Pull Request showing:
+17. Learning Outcomes
+Through this project, the following concepts were practically demonstrated:
 
-```text
-dev → main
-```
+Understanding Git fundamentals
 
-and the successful merge.
+Creating and managing Git repositories
 
-### Screenshot 8 – Final Branches
+Creating and switching branches
 
-GitHub branches page showing the final:
+Working with feature branches
 
-```text
-main
-dev
-```
+Making and tracking changes
 
-branches.
+Creating meaningful commits
 
-### Screenshot 9 – Repository Files
+Pushing changes to GitHub
 
-GitHub repository showing:
+Creating Pull Requests
 
-```text
-README.md
-.gitignore
-docs/
-index.html
-src/
-app.txt
-```
+Merging branches
 
-### Screenshot 10 – Git Tag
+Understanding merge conflicts
 
-GitHub/terminal showing the created version tag.
+Resolving conflicts manually
 
----
+Reviewing Git history
 
-# 24. Final Repository
+Using .gitignore
 
-The final GitHub repository is:
+Documenting projects using Markdown
 
-**Repository:** `devops-git-project`
+Following a collaborative Git workflow
 
-**GitHub:**
-https://github.com/sindhupriya5e1/devops-git-project
+18. Complete Git Workflow Summary
+The overall workflow implemented in this project can be summarized as:
 
-The repository demonstrates the complete Git workflow required for Task 4, including branching, commits, Pull Requests, merging, `.gitignore`, tags, and documentation.
+                 GitHub Repository
+                        │
+                        ▼
+                      main
+                        │
+                        ▼
+                       dev
+                        │
+             ┌──────────┴──────────┐
+             │                     │
+             ▼                     │
+          feature                  │
+             │                     │
+             ▼                     │
+        Feature Changes            │
+             │                     │
+             ▼                     │
+       Pull Request                │
+             │                     │
+             └──────────► dev ◄────┘
+                           │
+                           ▼
+                    Conflict Handling
+                           │
+                           ▼
+                    Conflict Resolution
+                           │
+                           ▼
+                    Pull Request
+                           │
+                           ▼
+                         main
+19. Conclusion
+This project demonstrates a complete practical Git and GitHub workflow starting from repository creation and branching to Pull Requests, merge conflicts, conflict resolution, and final integration.
 
----
+The project provides hands-on experience with Git version control and demonstrates how GitHub can be used for collaborative software development.
 
-# 25. Conclusion
+The documented workflow can be applied to real-world development projects where multiple developers work on different branches and integrate their changes through Pull Requests.
 
-Task 4 demonstrates a complete Git and GitHub based development workflow.
+✅ Project Completed
+Repository: devops-git-project
 
-The project was developed using a feature branch, integrated into the `dev` branch through a Pull Request, and finally promoted to the `main` branch through another Pull Request.
+Owner: sindhupriya5e1
 
-The use of Git branches, commits, Pull Requests, `.gitignore`, tags, and Markdown documentation provides a structured and professional approach to source-code management.
+Branching: main, dev, feature
 
-The final repository contains the required project files and documentation and can be reviewed through the GitHub repository link provided above.
+Key Concepts Covered:
+
+✅ Git Repository
+✅ GitHub
+✅ Branching
+✅ Feature Development
+✅ Commits
+✅ Pull Requests
+✅ Merge Conflicts
+✅ Conflict Resolution
+✅ Git Workflow
+✅ Git History
+✅ .gitignore
+✅ Project Documentation
+
+🔗 GitHub Repository
+View the DevOps Git Project
+
+
