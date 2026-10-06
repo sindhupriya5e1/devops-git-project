@@ -56,13 +56,8 @@ devops-git-project/
 │
 ├── README.md
 ├── .gitignore
-├── app.txt
 ├── index.html
-│
-├── src/
-│
-└── docs/
-    └── workflow.md
+    └──git workflow.md
 ```
 
 ### Description of Files
